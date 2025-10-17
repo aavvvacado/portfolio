@@ -18,8 +18,13 @@ export const TechStackCard = () => {
         <div>
           <h3 className="text-sm font-semibold mb-2">Frontend:</h3>
           <div className="flex flex-wrap gap-2">
-            {techStack.frontend.map((tech) => (
-              <Badge key={tech} variant="secondary" className="bg-tech-pill hover:bg-tech-pill/80">
+            {techStack.frontend.map((tech, index) => (
+              <Badge 
+                key={tech} 
+                variant="secondary" 
+                className="bg-tech-pill hover:bg-tech-pill/80 transition-all duration-300 hover:scale-110 hover:-translate-y-1 hover:shadow-lg animate-scale-in cursor-pointer"
+                style={{ animationDelay: `${index * 0.05}s`, animationFillMode: 'both' }}
+              >
                 {tech}
               </Badge>
             ))}
@@ -29,8 +34,13 @@ export const TechStackCard = () => {
         <div>
           <h3 className="text-sm font-semibold mb-2">Backend:</h3>
           <div className="flex flex-wrap gap-2">
-            {techStack.backend.map((tech) => (
-              <Badge key={tech} variant="secondary" className="bg-tech-pill hover:bg-tech-pill/80">
+            {techStack.backend.map((tech, index) => (
+              <Badge 
+                key={tech} 
+                variant="secondary" 
+                className="bg-tech-pill hover:bg-tech-pill/80 transition-all duration-300 hover:scale-110 hover:-translate-y-1 hover:shadow-lg animate-scale-in cursor-pointer"
+                style={{ animationDelay: `${(index + techStack.frontend.length) * 0.05}s`, animationFillMode: 'both' }}
+              >
                 {tech}
               </Badge>
             ))}

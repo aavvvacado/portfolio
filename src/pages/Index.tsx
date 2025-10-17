@@ -9,25 +9,41 @@ import { MusicCard } from "@/components/MusicCard";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background p-4 md:p-8">
+    <div className="min-h-screen bg-background p-4 md:p-8 animate-fade-in">
       <div className="max-w-7xl mx-auto">
         {/* Bento Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-auto">
           {/* Row 1 */}
-          <TechStackCard />
-          <ProfileCard />
-          <SocialLinksCard />
+          <div className="animate-fade-in" style={{ animationDelay: '0.1s', animationFillMode: 'both' }}>
+            <TechStackCard />
+          </div>
+          <div className="animate-fade-in" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
+            <ProfileCard />
+          </div>
+          <div className="animate-fade-in" style={{ animationDelay: '0.3s', animationFillMode: 'both' }}>
+            <SocialLinksCard />
+          </div>
           
           {/* Row 2 */}
-          <DailyStackCard />
-          <ProjectsCard />
+          <div className="animate-fade-in" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
+            <DailyStackCard />
+          </div>
+          <div className="animate-fade-in" style={{ animationDelay: '0.5s', animationFillMode: 'both' }}>
+            <ProjectsCard />
+          </div>
           
           {/* Row 3 */}
-          <TestimonialsCard />
-          <StoryCard />
+          <div className="animate-fade-in" style={{ animationDelay: '0.6s', animationFillMode: 'both' }}>
+            <TestimonialsCard />
+          </div>
+          <div className="animate-fade-in" style={{ animationDelay: '0.7s', animationFillMode: 'both' }}>
+            <StoryCard />
+          </div>
           
           {/* Row 4 */}
-          <MusicCard />
+          <div className="animate-fade-in" style={{ animationDelay: '0.8s', animationFillMode: 'both' }}>
+            <MusicCard />
+          </div>
         </div>
       </div>
     </div>

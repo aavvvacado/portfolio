@@ -20,7 +20,7 @@ export const SocialLinksCard = () => {
       <h2 className="text-xl font-bold mb-4">LINKS.</h2>
       
       <div className="grid grid-cols-2 gap-3">
-        {socialLinks.map((link) => {
+        {socialLinks.map((link, index) => {
           const Icon = iconMap[link.icon];
           return (
             <a
@@ -28,9 +28,10 @@ export const SocialLinksCard = () => {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-secondary hover:bg-secondary/80 rounded-2xl p-4 flex items-center justify-center transition-all hover:scale-105"
+              className="bg-secondary hover:bg-secondary/80 rounded-2xl p-4 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:rotate-3 hover:shadow-lg animate-scale-in"
+              style={{ animationDelay: `${index * 0.1}s`, animationFillMode: 'both' }}
             >
-              <Icon className="w-6 h-6" />
+              <Icon className="w-6 h-6 transition-transform duration-300" />
             </a>
           );
         })}

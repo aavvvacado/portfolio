@@ -25,9 +25,10 @@ export const DailyStackCard = () => {
           return (
             <div
               key={index}
-              className="bg-secondary rounded-2xl p-4 flex items-center gap-3 hover:bg-secondary/80 transition-all"
+              className="bg-secondary rounded-2xl p-4 flex items-center gap-3 hover:bg-secondary/80 transition-all duration-300 hover:translate-x-2 hover:shadow-md animate-slide-in-right cursor-pointer"
+              style={{ animationDelay: `${index * 0.1}s`, animationFillMode: 'both' }}
             >
-              <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
+              <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center transition-transform duration-300 hover:rotate-12">
                 <Icon className="w-5 h-5" />
               </div>
               <span className="font-medium">{tool.name}</span>

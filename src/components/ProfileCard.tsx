@@ -10,12 +10,12 @@ export const ProfileCard = () => {
         <img
           src={profile.profileImage}
           alt={profile.name}
-          className="w-16 h-16 rounded-full object-cover border-2 border-bento-border"
+          className="w-16 h-16 rounded-full object-cover border-2 border-bento-border transition-all duration-300 hover:scale-110 hover:rotate-6 hover:border-primary animate-scale-in cursor-pointer"
         />
         <div className="flex-1">
           <div className="flex items-center justify-between mb-1">
-            <h2 className="text-xl font-bold">{profile.name}</h2>
-            <span className="text-2xl">夜</span>
+            <h2 className="text-xl font-bold transition-colors duration-300 hover:text-primary">{profile.name}</h2>
+            <span className="text-2xl animate-pulse">夜</span>
           </div>
           <p className="text-muted-foreground text-sm mb-2">{profile.username}</p>
         </div>
@@ -29,12 +29,12 @@ export const ProfileCard = () => {
         </p>
       </div>
       
-      <div className="mt-6 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="w-2 h-2 rounded-full bg-available animate-pulse" />
-          <span className="text-sm text-available">{profile.availability}</span>
+      <div className="mt-6 flex items-center justify-between animate-fade-in">
+        <div className="flex items-center gap-2 group cursor-pointer">
+          <div className="w-2 h-2 rounded-full bg-available animate-pulse group-hover:scale-150 transition-transform duration-300" />
+          <span className="text-sm text-available group-hover:font-semibold transition-all duration-300">{profile.availability}</span>
         </div>
-        <span className="text-xs text-muted-foreground">
+        <span className="text-xs text-muted-foreground hover:text-foreground transition-colors duration-300">
           {new Date().toLocaleDateString('en-US', { 
             month: '2-digit', 
             day: '2-digit', 
