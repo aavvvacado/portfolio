@@ -7,12 +7,15 @@ export const StoryCard = () => {
   
   return (
     <BentoCard className="col-span-1 md:col-span-1 row-span-2">
-      <div className="mb-4">
+      <div className="mb-4 group cursor-pointer">
         <h2 className="text-sm mb-1">SO FAR</h2>
-        <h3 className="text-xl font-bold">STORY</h3>
+        <div className="flex items-center gap-2">
+          <h3 className="text-xl font-bold">STORY</h3>
+          <div className="h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-8"></div>
+        </div>
       </div>
       
-      <ScrollArea className="h-[400px]">
+      <ScrollArea className="h-[400px] [&>[data-radix-scroll-area-viewport]]:!overflow-y-scroll [&_[data-radix-scroll-area-scrollbar]]:hidden">
         <div className="space-y-4 pr-4">
           {story.map((item, index) => (
             <div key={index} className="border-l-2 border-bento-border pl-3 relative">

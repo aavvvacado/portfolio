@@ -1,51 +1,48 @@
 export const portfolioData = {
   profile: {
-    name: "Your Name",
-    username: "@yourhandle",
-    tagline: "I build",
-    bio: "Hello, I'm Your Name! A passionate Flutter developer creating beautiful mobile experiences.",
+    name: "Vishal Pratap Singh",
+    username: "@aavvvacado",
+    tagline: ["I", "build", "apps,", "UI", "&", "experiences"],
+    bio: "Flutter developer passionate about building scalable, responsive cross-platform mobile applications. Skilled in BLoc state management, Dio REST API handling, Firebase integration, and blockchain-enabled solutions.",
     availability: "Available for work",
-    profileImage: "/placeholder.svg"
+    profileImage: "/placeholder.svg",
+    email: "vpratapsingh099@gmail.com",
+    phone: "8941813316"
   },
   
   techStack: {
-    frontend: ["Flutter", "SwiftUI", "Bloc", "RiverPod"],
-    backend: ["Node.js", "Java", "NestJs", "Go", "Express.js", "NPM", "PNPM"]
+    frontend: ["Flutter", "Dart", "BLoC", "Firebase", "UI/UX"],
+    backend: ["REST APIs", "Dio", "Firestore", "Supabase", "PostgreSQL", "Solidity"]
   },
   
   socialLinks: [
-    { name: "GitHub", icon: "github", url: "https://github.com" },
-    { name: "Twitter", icon: "twitter", url: "https://twitter.com" },
-    { name: "Medium", icon: "book-open", url: "https://medium.com" },
-    { name: "Discord", icon: "message-circle", url: "https://discord.com" },
-    { name: "LinkedIn", icon: "linkedin", url: "https://linkedin.com" },
+    { name: "GitHub", icon: "github", url: "https://github.com/aavvvacado" },
+    { name: "LinkedIn", icon: "linkedin", url: "https://linkedin.com/in/vishal-pratap-singh" },
+    { name: "Email", icon: "mail", url: "mailto:vpratapsingh099@gmail.com" },
     { name: "Figma", icon: "figma", url: "https://figma.com" },
   ],
   
   projects: [
     {
-      title: "Exploration App",
-      description: "Mobile exploration app",
+      title: "NEUROFORGE ATC",
+      description: "AI-based cattle management app with real-time health tracking, breed classification, and ATC scoring. SIH 2025 Solution.",
       image: "/placeholder.svg",
-      url: "#"
+      url: "#",
+      tech: ["Flutter", "Firebase", "AI", "BLoC"]
     },
     {
-      title: "Pixel Adventure",
-      description: "Retro pixel adventure game in Flutter",
+      title: "Expense Manager DApp",
+      description: "Ethereum-based decentralized expense tracker using smart contracts with Flutter frontend.",
       image: "/placeholder.svg",
-      url: "#"
+      url: "#",
+      tech: ["Solidity", "Truffle", "Flutter"]
     },
     {
-      title: "Flight Management Backend",
-      description: "Backend for flight booking management",
+      title: "Smart Tyre Pulse",
+      description: "IoT-based tyre performance monitoring with predictive maintenance and cost analysis. SIH 2024 Project.",
       image: "/placeholder.svg",
-      url: "#"
-    },
-    {
-      title: "Assetwize",
-      description: "Asset management platform",
-      image: "/placeholder.svg",
-      url: "#"
+      url: "#",
+      tech: ["Flutter", "Firebase", "IoT"]
     }
   ],
   
@@ -54,38 +51,33 @@ export const portfolioData = {
     { name: "Figma", icon: "figma" },
     { name: "Postman", icon: "package" },
     { name: "Terminal", icon: "terminal" },
-    { name: "Notion", icon: "file-text" },
-    { name: "Discord", icon: "message-circle" }
+    { name: "Git", icon: "git-branch" },
+    { name: "Firebase", icon: "flame" }
   ],
   
   testimonials: [
     {
-      text: "An amazing engineer who brings lot of enthusiasm and energy to the table. His dedication and problem-solving mindset have led to multiple innovative solutions.",
-      author: "Client Name",
-      role: "Position at Company"
+      text: "Developed responsive cross-platform Flutter apps with intuitive UI/UX and smooth performance. Integrated REST APIs using Dio and implemented BLoC state management for scalable architecture.",
+      author: "GForce Pvt. Ltd",
+      role: "Flutter Frontend Intern"
     }
   ],
   
   story: [
     {
-      period: "2024 - Present",
-      role: "Founding Software Engineer",
-      company: "Startup Name"
+      period: "May 2025 - July 2025",
+      role: "Flutter Frontend Intern",
+      company: "GForce Pvt. Ltd"
     },
     {
-      period: "2024 - 2025",
-      role: "Software Engineer",
-      company: "Company Name"
+      period: "Nov 2024 - Dec 2024",
+      role: "Freelance Flutter Developer",
+      company: "SIH 2024 Project"
     },
     {
-      period: "2024 - 2024",
-      role: "Software Engineer",
-      company: "Another Company"
-    },
-    {
-      period: "2023 - 2024",
-      role: "Flutter Developer",
-      company: "Tech Company"
+      period: "Aug 2023 - May 2027",
+      role: "B.Tech in Information Technology",
+      company: "KIET Group of Institutions"
     }
   ],
   
