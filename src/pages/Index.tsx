@@ -6,18 +6,19 @@ import { DailyStackCard } from "@/components/DailyStackCard";
 import { TestimonialsCard } from "@/components/TestimonialsCard";
 import { StoryCard } from "@/components/StoryCard";
 import { MusicCard } from "@/components/MusicCard";
+import { MarqueeCard } from "@/components/MarqueeCard";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background p-4 md:p-8 animate-fade-in">
       <div className="max-w-7xl mx-auto">
         {/* Bento Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-auto">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-3 auto-rows-auto">
           {/* Row 1 */}
           <div className="animate-fade-in" style={{ animationDelay: '0.1s', animationFillMode: 'both' }}>
             <TechStackCard />
           </div>
-          <div className="animate-fade-in" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
+          <div className="animate-fade-in md:col-span-2" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
             <ProfileCard />
           </div>
           <div className="animate-fade-in" style={{ animationDelay: '0.3s', animationFillMode: 'both' }}>
@@ -29,20 +30,21 @@ const Index = () => {
             <DailyStackCard />
           </div>
           <div className="animate-fade-in" style={{ animationDelay: '0.5s', animationFillMode: 'both' }}>
+            <MarqueeCard />
+          </div>
+          <div className="animate-fade-in" style={{ animationDelay: '0.6s', animationFillMode: 'both' }}>
+            <MusicCard />
+          </div>
+          <div className="animate-fade-in" style={{ animationDelay: '0.7s', animationFillMode: 'both' }}>
             <ProjectsCard />
           </div>
           
           {/* Row 3 */}
-          <div className="animate-fade-in" style={{ animationDelay: '0.6s', animationFillMode: 'both' }}>
+          <div className="animate-fade-in" style={{ animationDelay: '0.8s', animationFillMode: 'both' }}>
             <TestimonialsCard />
           </div>
-          <div className="animate-fade-in" style={{ animationDelay: '0.7s', animationFillMode: 'both' }}>
+          <div className="animate-fade-in" style={{ animationDelay: '0.9s', animationFillMode: 'both' }}>
             <StoryCard />
-          </div>
-          
-          {/* Row 4 */}
-          <div className="animate-fade-in" style={{ animationDelay: '0.8s', animationFillMode: 'both' }}>
-            <MusicCard />
           </div>
         </div>
       </div>
