@@ -8,28 +8,30 @@ export const ProjectsCard = () => {
   
   return (
     <BentoCard className="col-span-1 md:col-span-1 row-span-2">
-      <div className="flex items-center justify-between mb-4 group cursor-pointer">
-        <div className="flex items-center gap-2">
-          <h2 className="text-lg font-bold">PROJECTS</h2>
-          <div className="h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-8"></div>
-        </div>
-        <Settings className="w-4 h-4" />
+      <div className="mb-4 flex items-center justify-between">
+        <h2 className="text-xl font-bold">PROJECTS</h2>
+        <Settings className="w-5 h-5 text-muted-foreground hover:text-foreground transition-colors cursor-pointer" />
       </div>
       
-      <ScrollArea className="h-[400px] [&>[data-radix-scroll-area-viewport]]:!overflow-y-scroll [&_[data-radix-scroll-area-scrollbar]]:hidden">
+      <ScrollArea className="h-[420px] [&>[data-radix-scroll-area-viewport]]:!overflow-y-scroll [&_[data-radix-scroll-area-scrollbar]]:hidden">
         <div className="space-y-3 pr-4">
           {projects.map((project, index) => (
-            <div 
+            <div
               key={index}
-              className="border border-bento-border rounded-xl p-3 transition-all cursor-pointer group/item"
+              className="group relative rounded-xl overflow-hidden cursor-pointer border border-border hover:border-primary/50 transition-all duration-300"
+              style={{ animationDelay: `${index * 0.1}s`, animationFillMode: 'both' }}
             >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-24 object-cover rounded-lg mb-2 transition-transform duration-300"
-              />
-              <h3 className="font-semibold text-sm mb-1">{project.title}</h3>
-              <p className="text-xs text-muted-foreground line-clamp-2">{project.description}</p>
+              <div className="aspect-video bg-gradient-to-br from-secondary to-secondary/50 flex items-center justify-center">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-3 bg-secondary/80 backdrop-blur-sm">
+                <h4 className="font-bold text-sm mb-1">{project.title}</h4>
+                <p className="text-xs text-muted-foreground line-clamp-2">{project.description}</p>
+              </div>
             </div>
           ))}
         </div>

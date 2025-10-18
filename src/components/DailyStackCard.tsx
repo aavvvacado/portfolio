@@ -18,20 +18,20 @@ export const DailyStackCard = () => {
   
   return (
     <BentoCard className="col-span-1 md:col-span-1 row-span-2">
-      <h2 className="text-lg font-bold mb-1">DAILY</h2>
-      <h3 className="text-sm mb-4">Tool STACK</h3>
+      <h2 className="text-xl font-bold mb-1">DAILY</h2>
+      <h3 className="text-sm text-muted-foreground mb-4">Tool STACK</h3>
       
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-3">
         {dailyTools.map((tool, index) => {
           const Icon = iconMap[tool.icon];
           return (
             <div
               key={index}
-              className="bg-secondary rounded-xl p-3 flex items-center gap-3 hover:bg-secondary/80 transition-all duration-300 hover:translate-x-1 cursor-pointer"
+              className="bg-secondary border border-border rounded-xl p-3 flex items-center gap-3 hover:bg-secondary/80 transition-all duration-300 cursor-pointer group"
               style={{ animationDelay: `${index * 0.1}s`, animationFillMode: 'both' }}
             >
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center transition-transform duration-300 hover:rotate-12 flex-shrink-0">
-                <Icon className="w-4 h-4" />
+              <div className="w-10 h-10 bg-primary/10 border border-primary/20 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:bg-primary/20 flex-shrink-0">
+                <Icon className="w-5 h-5 text-primary" />
               </div>
               <span className="font-medium text-sm">{tool.name}</span>
             </div>
