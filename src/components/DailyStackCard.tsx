@@ -1,6 +1,6 @@
 import { BentoCard } from "./BentoCard";
 import { portfolioData } from "@/data/portfolio";
-import { Code, Figma, Package, Terminal, FileText, MessageCircle } from "lucide-react";
+import { Code, Figma, Package, Terminal, FileText, MessageCircle, GitBranch, Flame } from "lucide-react";
 
 const iconMap: Record<string, any> = {
   code: Code,
@@ -9,6 +9,8 @@ const iconMap: Record<string, any> = {
   terminal: Terminal,
   "file-text": FileText,
   "message-circle": MessageCircle,
+  "git-branch": GitBranch,
+  flame: Flame,
 };
 
 export const DailyStackCard = () => {

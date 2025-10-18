@@ -1,6 +1,6 @@
 import { BentoCard } from "./BentoCard";
 import { portfolioData } from "@/data/portfolio";
-import { Github, Twitter, BookOpen, MessageCircle, Linkedin, Figma, Music } from "lucide-react";
+import { Github, Twitter, BookOpen, MessageCircle, Linkedin, Figma, Music, Mail } from "lucide-react";
 
 const iconMap: Record<string, any> = {
   github: Github,
@@ -10,6 +10,7 @@ const iconMap: Record<string, any> = {
   linkedin: Linkedin,
   figma: Figma,
   music: Music,
+  mail: Mail,
 };
 
 export const SocialLinksCard = () => {
