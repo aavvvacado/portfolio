@@ -17,9 +17,11 @@ export const portfolioData = {
   
   socialLinks: [
     { name: "GitHub", icon: "github", url: "https://github.com/aavvvacado" },
-    { name: "LinkedIn", icon: "linkedin", url: "https://linkedin.com/in/vishal-pratap-singh" },
+    { name: "Twitter", icon: "twitter", url: "https://twitter.com" },
     { name: "Email", icon: "mail", url: "mailto:vpratapsingh099@gmail.com" },
-    { name: "Figma", icon: "figma", url: "https://figma.com" },
+    { name: "LinkedIn", icon: "linkedin", url: "https://linkedin.com/in/vishal-pratap-singh" },
+    { name: "Discord", icon: "message-circle", url: "https://discord.com" },
+    { name: "Video", icon: "video", url: "#" },
   ],
   
   projects: [
@@ -82,10 +84,10 @@ export const portfolioData = {
   ],
   
   currentlyPlaying: {
-    title: "Your Favorite Song",
-    artist: "Artist Name",
-    album: "Album Name",
-    year: "2024",
+    title: "Selfless",
+    artist: "The Strokes",
+    album: "The New Abnormal",
+    year: "2020",
     coverArt: "/placeholder.svg"
   }
 };

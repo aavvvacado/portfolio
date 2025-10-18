@@ -5,21 +5,23 @@ export const MusicCard = () => {
   const { currentlyPlaying } = portfolioData;
   
   return (
-    <BentoCard className="col-span-1 md:col-span-1">
-      <div className="flex items-start gap-3">
+    <BentoCard className="col-span-1">
+      <div className="space-y-4">
         <img
           src={currentlyPlaying.coverArt}
           alt={currentlyPlaying.title}
-          className="w-24 h-24 rounded-xl object-cover border border-bento-border transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-primary/20 animate-scale-in cursor-pointer"
+          className="w-full aspect-square rounded-xl object-cover border border-border/50"
         />
-        <div className="flex-1 min-w-0">
-          <p className="text-xs text-muted-foreground mb-3 italic truncate">
-            "Kaizoku-ou ni naru otoko da."
-          </p>
-          <h3 className="font-bold text-sm mb-1 truncate">{currentlyPlaying.title}</h3>
-          <p className="text-xs text-muted-foreground truncate">By: {currentlyPlaying.artist}</p>
+        <div>
+          <h3 className="font-bold text-lg mb-1">{currentlyPlaying.title}</h3>
+          <p className="text-sm text-muted-foreground">By: {currentlyPlaying.artist}</p>
+          <p className="text-xs text-muted-foreground mt-1">{currentlyPlaying.year}</p>
         </div>
       </div>
+      
+      <p className="text-xs text-muted-foreground mt-4 italic">
+        "Kaizoku-ou ni naru otoko da."
+      </p>
     </BentoCard>
   );
 };
