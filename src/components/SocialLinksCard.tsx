@@ -14,9 +14,7 @@ export const SocialLinksCard = () => {
     socialLinks
   } = portfolioData;
   return <BentoCard className="mx-[2px]">
-      <div className="mb-4">
-        <h2 className="text-2xl md:text-3xl font-bold tracking-tight">LINKS.</h2>
-      </div>
+      <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-4">LINKS.</h2>
       <div className="grid grid-cols-4 gap-2">
         {socialLinks.slice(0, 8).map(link => {
         const Icon = iconMap[link.icon];
