@@ -16,8 +16,11 @@ export const SocialLinksCard = () => {
   
   return (
     <BentoCard>
-      <div className="grid grid-cols-3 gap-2">
-        {socialLinks.slice(0, 6).map((link) => {
+      <div className="mb-4">
+        <h2 className="text-2xl md:text-3xl font-bold tracking-tight">LINKS.</h2>
+      </div>
+      <div className="grid grid-cols-4 gap-2">
+        {socialLinks.slice(0, 8).map((link) => {
           const Icon = iconMap[link.icon];
           return (
             <a
@@ -25,12 +28,9 @@ export const SocialLinksCard = () => {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center gap-1.5 p-2 rounded-lg hover:bg-secondary/50 transition-all group"
+              className="aspect-square bg-white/5 rounded-xl flex items-center justify-center hover:bg-white/10 transition-all group border border-white/20"
             >
-              <div className="w-7 h-7 md:w-8 md:h-8 rounded-lg bg-secondary flex items-center justify-center group-hover:scale-110 transition-transform">
-                {Icon && <Icon className="w-3.5 h-3.5 md:w-4 md:h-4" />}
-              </div>
-              <span className="text-[9px] md:text-[10px] font-medium text-muted-foreground text-center">{link.name}</span>
+              <Icon className="w-6 h-6 md:w-7 md:h-7 text-white" />
             </a>
           );
         })}

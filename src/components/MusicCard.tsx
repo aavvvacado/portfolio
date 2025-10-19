@@ -6,22 +6,22 @@ export const MusicCard = () => {
   
   return (
     <BentoCard>
-      <div className="mb-2">
-        <h2 className="text-xs text-muted-foreground mb-0.5 font-bold tracking-wider">NOW PLAYING</h2>
-        <h3 className="text-lg md:text-xl font-bold tracking-tight">MUSIC</h3>
-      </div>
-      
-      <div className="flex items-center gap-3">
-        <img 
+      <div className="space-y-4">
+        <img
           src={currentlyPlaying.coverArt}
           alt={currentlyPlaying.title}
-          className="w-12 h-12 md:w-14 md:h-14 rounded-lg object-cover flex-shrink-0"
+          className="w-full aspect-square rounded-2xl object-cover border border-white/20"
         />
-        <div className="min-w-0">
-          <h4 className="font-bold text-xs mb-0.5 truncate">{currentlyPlaying.title}</h4>
-          <p className="text-[10px] text-muted-foreground truncate">{currentlyPlaying.artist}</p>
+        <div>
+          <h3 className="font-bold text-lg mb-1">{currentlyPlaying.title}</h3>
+          <p className="text-sm text-muted-foreground">By: {currentlyPlaying.artist}</p>
+          <p className="text-xs text-muted-foreground mt-1">{currentlyPlaying.year}</p>
         </div>
       </div>
+      
+      <p className="text-xs text-muted-foreground mt-4 italic">
+        "Kaizoku-ou ni naru otoko da."
+      </p>
     </BentoCard>
   );
 };

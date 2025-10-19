@@ -7,21 +7,21 @@ export const TestimonialsCard = () => {
   
   return (
     <BentoCard className="row-span-2">
-      <div className="mb-3">
-        <h2 className="text-xs text-muted-foreground mb-0.5 font-bold tracking-wider">KIND WORDS</h2>
-        <h3 className="text-lg md:text-xl font-bold tracking-tight">TESTIMONIALS</h3>
+      <div className="mb-6">
+        <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-1">VOICES</h2>
+        <h3 className="text-xl font-bold tracking-tight">OF <span className="text-white">TRUST</span></h3>
       </div>
       
-      <ScrollArea className="h-[250px] md:h-[350px]">
-        <div className="space-y-3 pr-2">
+      <ScrollArea className="h-[300px] md:h-[450px]">
+        <div className="space-y-6 pr-2">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="space-y-2 pb-3 border-b border-border/50 last:border-0">
-              <p className="text-muted-foreground text-[10px] leading-relaxed italic">
+            <div key={index} className="pb-6 border-b border-white/20 last:border-0">
+              <p className="text-white/90 text-sm leading-relaxed mb-4">
                 "{testimonial.text}"
               </p>
-              <div className="text-xs">
-                <p className="font-bold">{testimonial.author}</p>
-                <p className="text-muted-foreground text-[10px]">{testimonial.role}</p>
+              <div className="text-sm">
+                <p className="font-bold text-white">{testimonial.author}</p>
+                <p className="text-muted-foreground text-xs">{testimonial.role}</p>
               </div>
             </div>
           ))}

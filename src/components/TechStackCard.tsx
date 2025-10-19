@@ -7,21 +7,22 @@ export const TechStackCard = () => {
   
   return (
     <BentoCard>
-      <div className="mb-3">
-        <div className="text-xl md:text-2xl font-bold mb-2">{ }</div>
-        <h2 className="text-xs text-muted-foreground mb-0.5 font-bold tracking-wider">USES</h2>
-        <h3 className="text-lg md:text-xl font-bold tracking-tight">TECH STACK</h3>
+      <div className="mb-6">
+        <div className="text-3xl md:text-4xl font-mono mb-4 text-white/80">{"{ }"}</div>
+        <h2 className="text-3xl md:text-4xl font-bold tracking-tight leading-none">
+          TECH<br/>STACK
+        </h2>
       </div>
       
-      <div className="space-y-3">
+      <div className="space-y-5">
         <div>
-          <h3 className="text-[10px] font-bold mb-1.5 tracking-wider opacity-70">Frontend:</h3>
-          <div className="flex flex-wrap gap-1.5">
+          <h3 className="text-xs font-bold mb-3 tracking-wider text-white/70">Frontend:</h3>
+          <div className="flex flex-wrap gap-2">
             {techStack.frontend.map((tech) => (
               <Badge 
                 key={tech}
-                variant="secondary"
-                className="bg-tech-pill border-none text-[10px] px-2 py-0.5 hover:bg-tech-pill/80"
+                variant="outline"
+                className="border-white/50 text-white text-xs px-3 py-1 hover:bg-white/10"
               >
                 {tech}
               </Badge>
@@ -30,13 +31,13 @@ export const TechStackCard = () => {
         </div>
         
         <div>
-          <h3 className="text-[10px] font-bold mb-1.5 tracking-wider opacity-70">Backend:</h3>
-          <div className="flex flex-wrap gap-1.5">
+          <h3 className="text-xs font-bold mb-3 tracking-wider text-white/70">Backend:</h3>
+          <div className="flex flex-wrap gap-2">
             {techStack.backend.map((tech) => (
               <Badge 
                 key={tech}
-                variant="secondary"
-                className="bg-tech-pill border-none text-[10px] px-2 py-0.5 hover:bg-tech-pill/80"
+                variant="outline"
+                className="border-white/50 text-white text-xs px-3 py-1 hover:bg-white/10"
               >
                 {tech}
               </Badge>

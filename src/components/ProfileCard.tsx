@@ -19,26 +19,36 @@ export const ProfileCard = () => {
   
   return (
     <BentoCard className="col-span-2">
-      <div className="flex items-start gap-3">
-        <img 
-          src={profile.profileImage}
-          alt={profile.name}
-          className="w-14 h-14 md:w-16 md:h-16 rounded-full object-cover flex-shrink-0"
-        />
-        <div className="flex-1 min-w-0">
-          <h1 className="text-xl md:text-2xl font-bold mb-0.5">{profile.name}</h1>
-          <p className="text-muted-foreground text-xs mb-2">{profile.username}</p>
-          
-          <div className="flex flex-wrap items-center gap-2 text-xs">
-            <span className="opacity-70">夜</span>
-            <div className="flex items-center gap-1.5">
-              <div className="w-1.5 h-1.5 rounded-full bg-available-status animate-pulse" />
-              <span className="text-muted-foreground">{profile.availability}</span>
-            </div>
-            <span className="text-muted-foreground">
-              {new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false })} • {new Date().toLocaleDateString('en-US', { day: '2-digit', month: '2-digit', year: '2-digit' })}
-            </span>
+      <div className="flex items-start justify-between">
+        <div className="flex items-start gap-4">
+          <img 
+            src={profile.profileImage}
+            alt={profile.name}
+            className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover flex-shrink-0 border-2 border-white/20"
+          />
+          <div>
+            <h1 className="text-xl md:text-2xl font-bold mb-1">{profile.name}</h1>
+            <p className="text-muted-foreground text-sm mb-4">{profile.username}</p>
+            
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">I build UIs</h2>
+            <p className="text-sm text-foreground/90 leading-relaxed max-w-lg">
+              {profile.bio}
+            </p>
           </div>
+        </div>
+        <span className="text-3xl opacity-70">夜</span>
+      </div>
+      
+      <div className="mt-6 flex items-center justify-between text-xs md:text-sm">
+        <p className="text-muted-foreground italic">"Do I need setState() here...?"</p>
+        <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2">
+            <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+            <span className="text-accent font-medium">{profile.availability}</span>
+          </div>
+          <span className="text-muted-foreground">
+            {new Date().toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' })}, {new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true })}
+          </span>
         </div>
       </div>
     </BentoCard>

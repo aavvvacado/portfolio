@@ -16,23 +16,21 @@ export const DailyStackCard = () => {
   
   return (
     <BentoCard className="row-span-2">
-      <div className="mb-3">
-        <h2 className="text-xs text-muted-foreground mb-0.5 font-bold tracking-wider">DAILY</h2>
-        <h3 className="text-lg md:text-xl font-bold tracking-tight">STACK</h3>
-      </div>
+      <h2 className="text-3xl md:text-4xl font-bold mb-2 tracking-tight">DAILY</h2>
+      <h3 className="text-base text-muted-foreground mb-6">Tool <span className="text-white font-bold">STACK</span></h3>
       
-      <div className="space-y-2">
+      <div className="space-y-3">
         {dailyTools.map((tool) => {
           const Icon = iconMap[tool.icon as keyof typeof iconMap];
           return (
             <div 
               key={tool.name}
-              className="flex items-center gap-2 p-2 rounded-lg border border-border/50 hover:border-border transition-colors"
+              className="bg-white/5 rounded-2xl p-4 flex items-center gap-4 hover:bg-white/10 transition-all border border-white/20"
             >
-              <div className="w-7 h-7 rounded-lg bg-secondary flex items-center justify-center flex-shrink-0">
-                {Icon && <Icon className="w-3.5 h-3.5" />}
+              <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center flex-shrink-0">
+                {Icon && <Icon className="w-6 h-6 text-black" />}
               </div>
-              <span className="text-xs font-medium">{tool.name}</span>
+              <span className="text-sm font-medium">{tool.name}</span>
             </div>
           );
         })}
