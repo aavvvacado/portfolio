@@ -11,7 +11,7 @@ export const BentoCard = ({ children, className, hover = true }: BentoCardProps)
   return (
     <div
       className={cn(
-        "bg-bento-card rounded-3xl border border-bento-border p-6",
+        "bg-bento-card rounded-2xl border border-bento-border p-4",
         "transition-all duration-200 animate-fade-in h-full",
         hover && "hover:border-border/60",
         className

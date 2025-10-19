@@ -6,22 +6,22 @@ export const TestimonialsCard = () => {
   const { testimonials } = portfolioData;
   
   return (
-    <BentoCard className="col-span-1 row-span-2">
-      <div className="mb-5">
-        <h2 className="text-3xl font-bold tracking-tight mb-1">VOICES</h2>
-        <h3 className="text-lg font-bold tracking-tight">OF <span className="text-foreground">TRUST</span></h3>
+    <BentoCard className="row-span-2">
+      <div className="mb-3">
+        <h2 className="text-xs text-muted-foreground mb-0.5 font-bold tracking-wider">KIND WORDS</h2>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight">TESTIMONIALS</h3>
       </div>
       
-      <ScrollArea className="h-[500px] [&>[data-radix-scroll-area-viewport]]:!overflow-y-scroll [&_[data-radix-scroll-area-scrollbar]]:hidden">
-        <div className="space-y-6 pr-2">
+      <ScrollArea className="h-[250px] md:h-[350px]">
+        <div className="space-y-3 pr-2">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="pb-6 border-b border-border/50 last:border-0">
-              <p className="text-muted-foreground text-sm leading-relaxed italic mb-4">
+            <div key={index} className="space-y-2 pb-3 border-b border-border/50 last:border-0">
+              <p className="text-muted-foreground text-[10px] leading-relaxed italic">
                 "{testimonial.text}"
               </p>
-              <div className="text-sm">
+              <div className="text-xs">
                 <p className="font-bold">{testimonial.author}</p>
-                <p className="text-muted-foreground text-xs">{testimonial.role}</p>
+                <p className="text-muted-foreground text-[10px]">{testimonial.role}</p>
               </div>
             </div>
           ))}

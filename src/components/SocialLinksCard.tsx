@@ -15,9 +15,7 @@ export const SocialLinksCard = () => {
   const { socialLinks } = portfolioData;
   
   return (
-    <BentoCard className="col-span-1">
-      <h2 className="text-2xl font-bold mb-4 tracking-tight">LINKS.</h2>
-      
+    <BentoCard>
       <div className="grid grid-cols-3 gap-2">
         {socialLinks.slice(0, 6).map((link) => {
           const Icon = iconMap[link.icon];
@@ -27,9 +25,12 @@ export const SocialLinksCard = () => {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-secondary hover:bg-secondary/80 rounded-xl p-4 flex items-center justify-center transition-all duration-200 aspect-square"
+              className="flex flex-col items-center gap-1.5 p-2 rounded-lg hover:bg-secondary/50 transition-all group"
             >
-              <Icon className="w-6 h-6" />
+              <div className="w-7 h-7 md:w-8 md:h-8 rounded-lg bg-secondary flex items-center justify-center group-hover:scale-110 transition-transform">
+                {Icon && <Icon className="w-3.5 h-3.5 md:w-4 md:h-4" />}
+              </div>
+              <span className="text-[9px] md:text-[10px] font-medium text-muted-foreground text-center">{link.name}</span>
             </a>
           );
         })}
